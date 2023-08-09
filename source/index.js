@@ -4,15 +4,18 @@ const buttonEat = document.getElementById("buttonEat");
 const petImage = document.getElementById('Peach');
 const petMessage = document.getElementById('text');
 const petEnergy = document.getElementById('energyLevel');
+const petHunger = document.getElementById('hungerLevel');
 
 
 
 function initPet(pet) {
   const petName = pet;
   let energy = 100;
+  let hunger = 0;
   let age = 0;
   let status = "";
   petEnergy.textContent=`Energy level:${energy}`;
+  petHunger.textContent=`Hunger scale:${hunger}`;
 
   return {
     sleep: function () {
@@ -22,10 +25,13 @@ function initPet(pet) {
         status = "sleeping";
         age++;
         energy += 20;
+        hunger += 20;
         petEnergy.textContent=`Energy level:${energy}`;
+        petHunger.textContent=`Hunger scale:${hunger}`;
 
         return {
           energy,
+          hunger,
           age,
           status,
         };
@@ -48,9 +54,12 @@ function initPet(pet) {
       status = "running";
       age++;
       energy = energy - 30;
-      petEnergy.textContent=`Energy level:${energy}`;
+      hunger += 20;
+      petEnergy.textContent=`Energy level:${energy}`;      
+      petHunger.textContent=`Hunger scale:${hunger}`;
         return {
           energy,
+          hunger,
           age,
           status,
         }
@@ -67,22 +76,26 @@ function initPet(pet) {
         status = "eating";
         age++;
         energy = energy + 10;
+        hunger = 0;
+        petHunger.textContent=`Hunger scale:${hunger}`;
         petEnergy.textContent=`Energy level:${energy}`;
         return {
           energy,
+          hunger,
           age,
           status,
         };
       }else if(energy<=90){
-        petImage.src='./assetsCamila/peachCat.gif';
+        petImage.src='./assetsCamila/full.gif';
         petMessage.textContent= "I'm full";
         petEnergy.textContent=`Energy level:${energy}`
-        return energy;
+        return energy, hunger;
       }else{
         petImage.src="./assetsCamila/peachCat.gif";
         petMessage.textContent= "I'm not hungry Karen";
         petEnergy.textContent=`Energy level:${energy}`
-        return energy;
+        petHunger.textContent=`Hunger scale:${hunger}`;
+        return energy, hunger;
       }
       
     },
