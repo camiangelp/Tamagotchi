@@ -63,10 +63,8 @@ h1 {
 }
 
 .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70%;
+  height: 30vh;
+  object-fit: contain;
 }
 
 .info{
@@ -91,6 +89,7 @@ h1 {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 5%;
+  flex-wrap: wrap;
 }
 
 /* .button {
