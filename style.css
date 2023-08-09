@@ -11,7 +11,8 @@
 
 body {
   font-family: 'Bacasime Antique', serif, 'Caprasimo', cursive, 'Plus Jakarta Sans', sans-serif;
-  background-color: $subcolor;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   font-family: Arial, sans-serif;
   height: 100vh;
   width: 100vw;
@@ -30,9 +31,10 @@ body {
 .tamagotchi {
   display: flex;
   flex-direction: column;
-  border: 2px solid #6c757d;
-  padding: 20px;
-  border-radius: 10px;
+  border: 3px solid #03384b;
+  padding: 40px 40px 20px 40px;
+  position: relative;
+  border-radius: 50px;
   text-align: center;
   background-color: #FF9B9B;
   align-items: center;
@@ -44,9 +46,10 @@ body {
 /* Screen container */
 .screen {
   background-color: white;
-  border: 2px solid #6c757d;
-  padding: 20px;
-  border-radius: 10px;
+  border: 3px solid #03384b;
+  padding: 20px 40px 20px 40px;
+  position: relative;
+  border-radius: 50px;
   margin: 10px 0;
   height: 70%;
   width: 90%;
@@ -55,7 +58,7 @@ body {
 }
 
 h1 {
-  color: black;
+  color: #03384b;
   font-family: 'Caprasimo', cursive;
 }
 
@@ -65,6 +68,20 @@ h1 {
   align-items: center;
   height: 70%;
 }
+
+.info{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  justify-content: space-around;
+  
+}
+ .fontText{
+  color: #03384b;
+  font-family: 'Caprasimo', cursive;
+  font-weight: lighter;
+ }
 
 .controles {
   width: 80%;
@@ -108,14 +125,11 @@ h1 {
 }
 
 #text{
-  display: flex;
-  justify-content: center
+  color: #03384b;
+  font-family: 'Caprasimo', cursive;
 
 }
 
-#energyLevel{
-  margin-bottom: 20px;
-}
 
 @media only screen and (max-width:576px){
   .controles {
@@ -128,7 +142,7 @@ h1 {
     margin-bottom: 5%;
   }
   h1 {
-    color: black;
+    color: #03384b;
     font-family: 'Caprasimo', cursive;
   }
   .button {
@@ -150,7 +164,7 @@ h1 {
     }
   
   .button:hover {
-    background-color: #0056b3;
+    background-color: #CBFFA9;
   }
 
 

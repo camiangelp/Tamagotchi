@@ -14,8 +14,8 @@ function initPet(pet) {
   let hunger = 0;
   let age = 0;
   let status = "";
-  petEnergy.textContent=`Energy level:${energy}`;
-  petHunger.textContent=`Hunger scale:${hunger}`;
+  petEnergy.textContent=`Energy level: ${energy}`;
+  petHunger.textContent=`Hunger scale: ${hunger}`;
 
   return {
     sleep: function () {
@@ -26,8 +26,8 @@ function initPet(pet) {
         age++;
         energy += 20;
         hunger += 20;
-        petEnergy.textContent=`Energy level:${energy}`;
-        petHunger.textContent=`Hunger scale:${hunger}`;
+        petEnergy.textContent=`Energy level: ${energy}`;
+        petHunger.textContent=`Hunger scale: ${hunger}`;
 
         return {
           energy,
@@ -38,12 +38,12 @@ function initPet(pet) {
       } else if(status==='sleeping'){
         petImage.src="./assetsCamila/peachCat.gif";
         petMessage.textContent= "I just slept";
-        petEnergy.textContent=`Energy level:${energy}`
+        petEnergy.textContent=`Energy level: ${energy}`
         return energy;
       } else {
         petImage.src="./assetsCamila/peachCat.gif";
         petMessage.textContent= "I don't need to sleep, I want to play with those birds";
-        petEnergy.textContent=`Energy level:${energy}`
+        petEnergy.textContent=`Energy level: ${energy}`
         return energy;
       }
     },
@@ -55,8 +55,8 @@ function initPet(pet) {
       age++;
       energy = energy - 30;
       hunger += 20;
-      petEnergy.textContent=`Energy level:${energy}`;      
-      petHunger.textContent=`Hunger scale:${hunger}`;
+      petEnergy.textContent=`Energy level: ${energy}`;      
+      petHunger.textContent=`Hunger scale: ${hunger}`;
         return {
           energy,
           hunger,
@@ -77,8 +77,8 @@ function initPet(pet) {
         age++;
         energy = energy + 10;
         hunger = 0;
-        petHunger.textContent=`Hunger scale:${hunger}`;
-        petEnergy.textContent=`Energy level:${energy}`;
+        petHunger.textContent=`Hunger scale: ${hunger}`;
+        petEnergy.textContent=`Energy level: ${energy}`;
         return {
           energy,
           hunger,
@@ -88,13 +88,13 @@ function initPet(pet) {
       }else if(energy<=90){
         petImage.src='./assetsCamila/full.gif';
         petMessage.textContent= "I'm full";
-        petEnergy.textContent=`Energy level:${energy}`
+        petEnergy.textContent=`Energy level: ${energy}`
         return energy, hunger;
       }else{
         petImage.src="./assetsCamila/peachCat.gif";
         petMessage.textContent= "I'm not hungry Karen";
-        petEnergy.textContent=`Energy level:${energy}`
-        petHunger.textContent=`Hunger scale:${hunger}`;
+        petEnergy.textContent=`Energy level: ${energy}`
+        petHunger.textContent=`Hunger scale: ${hunger}`;
         return energy, hunger;
       }
       
