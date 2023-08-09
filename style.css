@@ -5,13 +5,13 @@
 /* Reset and general styles */
 * {
   box-sizing: border-box;
-  font-family: 'Bacasime Antique', serif;
+  font-family: lato,sans-serif;
   font-weight: bold;
 }
 
 body {
   font-family: 'Bacasime Antique', serif, 'Caprasimo', cursive, 'Plus Jakarta Sans', sans-serif;
-  background-color: #f8f9fa;
+  background-color: $subcolor;
   font-family: Arial, sans-serif;
   height: 100vh;
   width: 100vw;
@@ -34,7 +34,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  background-color: rgba(254, 167, 151, 0.701);
+  background-color: #FF9B9B;
   align-items: center;
   height: fit-content;
   width: 40%;
@@ -70,21 +70,41 @@ h1 {
   width: 80%;
   display: flex;
   justify-content: space-around;
+  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 5%;
 }
 
-.button {
+/* .button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #435B66;
   color: white;
   cursor: pointer;
-}
+} */
+.button {
+  background-color: #FFFEC4;
+  font-family: lato,sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #03384b;
+  display: inline-block;
+  padding: 20px 40px 20px 40px;
+  position: relative;
+  border: 3px solid #03384b;
+ }
+
+.button-1{
+  border-radius: 100em;  
+  }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #CBFFA9;
 }
 
 #text{
@@ -95,4 +115,43 @@ h1 {
 
 #energyLevel{
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width:576px){
+  .controles {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5%;
+  }
+  h1 {
+    color: black;
+    font-family: 'Caprasimo', cursive;
+  }
+  .button {
+    font-family: lato,sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #03384b;
+    display: inline-block;
+    padding: 20px 40px 20px 40px;
+    position: relative;
+    border: 3px solid #03384b;
+   }
+  
+  .button-1{
+    border-radius: 100em;  
+    }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+
 }
